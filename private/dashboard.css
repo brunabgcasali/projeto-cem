@@ -1,0 +1,694 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f4f6f9;
+
+    color: #1f2937;
+}
+
+
+/* ========================================
+   DASHBOARD
+======================================== */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #071a33;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 15px;
+
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.10);
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    margin-bottom: 35px;
+}
+
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+}
+
+
+.logo-title {
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.menu-item span {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+.menu-item:hover {
+    background: #0d2b4d;
+
+    color: #ffffff;
+}
+
+
+.menu-item.active {
+    background: #f58220;
+
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+
+/* ========================================
+   RODAPÉ DA SIDEBAR
+======================================== */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* ========================================
+   BOTÃO SAIR
+======================================== */
+
+.btn-sair {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border: 1px solid #f58220;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #f58220;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.btn-sair:hover {
+    background: #f58220;
+
+    color: #ffffff;
+}
+
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.main-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   TOPBAR
+======================================== */
+
+.topbar {
+    min-height: 90px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 35px;
+}
+
+
+.topbar h1 {
+    color: #071a33;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+
+.topbar p {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   USUÁRIO
+======================================== */
+
+.user-area {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.user-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #fff3e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user-label {
+    color: #9ca3af;
+
+    font-size: 11px;
+}
+
+
+.user-info strong {
+    color: #071a33;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.content {
+    padding: 35px;
+}
+
+
+/* ========================================
+   CARD DE BOAS-VINDAS
+======================================== */
+
+.welcome-card {
+    background: linear-gradient(
+        135deg,
+        #071a33,
+        #0d3155
+    );
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+}
+
+
+.welcome-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    background: #f58220;
+
+    border-radius: 50%;
+
+    right: -60px;
+    top: -70px;
+
+    opacity: 0.85;
+}
+
+
+.welcome-label {
+    color: #f58220;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.welcome-card h2 {
+    font-size: 25px;
+
+    margin: 8px 0;
+}
+
+
+.welcome-card p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+.card {
+    width: 100%;
+
+    min-height: 130px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    border: 1px solid #e5e7eb;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+
+    border-color: #f58220;
+}
+
+
+/* ========================================
+   FOCO DO CARD
+======================================== */
+
+.card:focus-visible {
+    outline: 3px solid rgba(245, 130, 32, 0.35);
+
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   ÍCONE DO CARD
+======================================== */
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #fff3e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   CONTEÚDO DO CARD
+======================================== */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+
+.card span {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+.card strong {
+    color: #071a33;
+
+    font-size: 17px;
+}
+
+
+
+/* ========================================
+   RESPONSIVIDADE
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+
+    .content {
+        padding: 25px;
+    }
+
+
+    .topbar {
+        padding: 20px 25px;
+    }
+
+
+    .cards {
+        grid-template-columns:
+            repeat(2, minmax(220px, 1fr));
+
+        gap: 20px;
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+   CELULAR
+======================================== */
+
+@media (max-width: 700px) {
+
+    /*
+        Sidebar menor
+    */
+
+    .sidebar {
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+
+    /*
+        Esconde o nome do sistema
+    */
+
+    .logo-title {
+        display: none;
+    }
+
+
+    .logo-container {
+        justify-content: center;
+    }
+
+
+    /*
+        Centraliza os ícones do menu
+    */
+
+    .menu-item {
+        justify-content: center;
+
+        padding: 13px 5px;
+    }
+
+
+    .menu-item span {
+        margin: 0;
+    }
+
+
+    /*
+        Botão sair somente com o ícone
+    */
+
+    .btn-sair {
+        font-size: 0;
+    }
+
+
+    .btn-sair span {
+        font-size: 18px;
+    }
+
+
+    /*
+        Topbar
+    */
+
+    .topbar {
+        padding: 20px;
+    }
+
+
+    /*
+        Conteúdo
+    */
+
+    .content {
+        padding: 20px;
+    }
+
+
+    /*
+        Cards continuam em 2
+        enquanto houver espaço
+    */
+
+    .cards {
+        grid-template-columns:
+            repeat(2, minmax(180px, 1fr));
+
+        gap: 15px;
+    }
+
+
+    .card {
+        min-height: 100px;
+
+        padding: 15px;
+    }
+
+
+    .card-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+
+    .card strong {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ========================================
+   CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 600px) {
+
+    /*
+        Em telas muito pequenas,
+        passa para 1 card por linha.
+    */
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        width: 100%;
+
+        min-height: 90px;
+    }
+
+
+    /*
+        Topbar fica vertical
+    */
+
+    .topbar {
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+
+    .user-area {
+        width: 100%;
+    }
+
+
+    /*
+        Welcome
+    */
+
+    .welcome-card {
+        padding: 22px;
+    }
+
+
+    .welcome-card h2 {
+        font-size: 21px;
+    }
+
+}

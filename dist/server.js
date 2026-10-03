@@ -1,0 +1,28 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const path_1 = __importDefault(require("path"));
+const cookie_parser_1 = __importDefault(require("cookie-parser"));
+const dotenv_1 = __importDefault(require("dotenv"));
+const auth_routes_1 = __importDefault(require("./routes/auth.routes"));
+const page_routes_1 = __importDefault(require("./routes/page.routes"));
+dotenv_1.default.config();
+const app = (0, express_1.default)();
+app.use(express_1.default.json());
+app.use((0, cookie_parser_1.default)());
+// SOMENTE arquivos públicos
+app.use(express_1.default.static(path_1.default.join(__dirname, "../public")));
+// API
+app.use("/api", auth_routes_1.default);
+// Páginas
+app.use("/", page_routes_1.default);
+app.get("/", (req, res) => {
+    res.redirect("/login.html");
+});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando em http://localhost:${PORT}`);
+});

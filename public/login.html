@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Login - Sistema CEM</title>
+
+<link rel="stylesheet" href="/login.css">
+```
+
+</head>
+
+<body>
+
+```
+<main class="login-container">
+
+    <section class="login-card">
+
+        <!-- Área da logo -->
+        <div class="logo-container">
+            <img
+                src="/logo.png"
+                alt="Logo do Sistema CEM"
+                class="logo"
+            >
+        </div>
+
+        <!-- Título -->
+        <div class="login-header">
+            <h1>Bem-vindo</h1>
+            <p>Entre com suas credenciais para acessar o sistema</p>
+        </div>
+
+        <!-- Formulário -->
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label for="matricula">Matrícula</label>
+
+                <input
+                    type="text"
+                    id="matricula"
+                    name="matricula"
+                    placeholder="Digite sua matrícula"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn-login">
+                Entrar
+            </button>
+
+        </form>
+
+        <!-- Mensagem de erro/sucesso -->
+        <p id="mensagem" class="mensagem"></p>
+
+        <div class="login-footer">
+            <span>Sistema CEM</span>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="/login.js"></script>
+
+
+</body>
+
+</html>
