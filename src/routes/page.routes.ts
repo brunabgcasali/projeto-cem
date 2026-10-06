@@ -65,5 +65,4 @@ autenticarToken,
 
 );
 
-
 export default router;
